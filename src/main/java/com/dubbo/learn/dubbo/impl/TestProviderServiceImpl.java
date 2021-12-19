@@ -5,7 +5,8 @@ import com.alibaba.dubbo.config.annotation.Service;
 
 @Service(version="1.0.0")
 public class TestProviderServiceImpl implements TestProviderService  {
-    public String Hello(String who) {
-        return "Hello world ! Dear Programer " + who ;
+    public String sayHello(String who) {
+        System.out.println("call sayHello " + who);
+        return "Hello world ! Dear " + who ;
     }
 }
